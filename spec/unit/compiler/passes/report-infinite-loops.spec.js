@@ -1,4 +1,8 @@
-describe("compiler pass |reportLeftRecursion|", function() {
+/* global describe, expect, it, PEG */
+
+"use strict";
+
+describe("compiler pass |reportInfiniteLoops|", function() {
   var pass = PEG.compiler.passes.check.reportInfiniteLoops;
 
   it("reports infinite loops for zero_or_more", function() {
@@ -74,6 +78,6 @@ describe("compiler pass |reportLeftRecursion|", function() {
 
     expect(pass).not.toReportError('start = [a-d]*');
 
-    expect(pass).not.toReportError('start = "."*');
+    expect(pass).not.toReportError('start = .*');
   });
 });

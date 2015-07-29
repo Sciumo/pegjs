@@ -1,3 +1,7 @@
+/* global describe, expect, it, PEG */
+
+"use strict";
+
 describe("compiler pass |reportLeftRecursion|", function() {
   var pass = PEG.compiler.passes.check.reportLeftRecursion;
 
@@ -88,7 +92,7 @@ describe("compiler pass |reportLeftRecursion|", function() {
 
       expect(pass).not.toReportError('start = [a-d] start');
 
-      expect(pass).not.toReportError('start = "." start');
+      expect(pass).not.toReportError('start = . start');
     });
   });
 });
