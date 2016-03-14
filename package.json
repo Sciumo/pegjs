@@ -9,7 +9,11 @@
   "homepage": "http://pegjs.org/",
   "bugs": "https://github.com/pegjs/pegjs/issues",
   "license": "MIT",
-  "author": "David Majda <david@majda.cz> (http://majda.cz/)",
+  "author":          {
+    "name":  "David Majda",
+    "email": "david@majda.cz",
+    "url":   "http://majda.cz/"
+  },
   "files": [
     "CHANGELOG.md",
     "LICENSE",
